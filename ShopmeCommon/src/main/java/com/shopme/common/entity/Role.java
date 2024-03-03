@@ -13,8 +13,8 @@ import javax.persistence.Table;
 public class Role {
 	
 	
-	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
 	private Integer id;
 	
 	@Column(length = 40 , nullable = false, unique = true)
@@ -23,6 +23,12 @@ public class Role {
 	@Column(length = 150 , nullable = false)
 	private String description;
 	
+	
+	public Role() {
+		super();
+	}
+
+
 	public Role(String name, String description) {
 		super();
 		this.name = name;
